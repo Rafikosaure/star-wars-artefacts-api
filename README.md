@@ -5,7 +5,7 @@ Cette API a été conçue par un développeur passionné de Star Wars, dans le b
 ## 🌐 Base URL
 
 ```
-http://localhost:3000/api/products
+https://star-wars-artefacts-api.vercel.app/api/products
 ```
 
 ## 🔍 Routes disponibles
