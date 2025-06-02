@@ -1,3 +1,12 @@
+@import "tailwindcss";
+@font-face {
+  font-family: 'Starjedi';
+  src: url('../../public/fonts/Starjedi.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
