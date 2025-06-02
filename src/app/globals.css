@@ -1,7 +1,12 @@
-@import "tailwindcss";
 @font-face {
   font-family: 'Starjedi';
   src: url('../../public/fonts/Starjedi.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NotoSansMono';
+  src: url('../../public/fonts/NotoSansMono.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
