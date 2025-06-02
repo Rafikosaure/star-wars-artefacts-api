@@ -109,7 +109,7 @@ export default function Home() {
         </p>
 
         <h2 className={styles.subheading}>🌐 Base URL</h2>
-        <pre className={styles.quote}><code>https://star-wars-artefacts-api.vercel.app/api/products</code></pre>
+        <p className={styles.quote}><code>https://star-wars-artefacts-api.vercel.app/api/products</code></p>
 
         <h2 className={styles.subheading}>🔍 Routes disponibles</h2>
         <h3 className={styles.firstroute}>✅ GET /api/products</h3>
