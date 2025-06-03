@@ -147,7 +147,7 @@ export default function Home() {
           <p className={styles.paragraph}>
             {contributorPresentation01}
           </p>
-          <p className={styles.paragraph}>
+          <p className={styles.paragraph}><br />
             {contributorPresentation02}
           </p>
         </div>
