@@ -14,11 +14,11 @@ import CodeBlock from "./components/CodeBlock";
 
 export default function Home() {
 
-  const apiPresentation = "Cette API présente des artefacts liés à Star Wars, l'univers de fiction iconique imaginé par Georges Lucas. Elle a été conçue originellement par un développeur passionné de Star Wars dans le but de fournir à l'un de ses projets e-commerce des produits de vente liés à ce space-opéra iconique. L'API permet grâce à sa structure d'explorer, filtrer et consulter des artefacts de l'univers Star Wars. Ces artefacts peuvent être issus du canon officiel, de l'univers Legends, ou encore totalement imaginaires."
+  const apiPresentation = "Cette API présente des artefacts divers liés à Star Wars, l'univers de fiction imaginé par Georges Lucas. Elle a été conçue originellement par un développeur passionné de Star Wars dans le but de fournir à l'un de ses projets e-commerce des produits de vente liés à ce space-opéra iconique. C'est pour cette raison que les artefacts listés ont la structure de produits de vente, avec des clés de données spécifiques. Toutefois, d'autres usages que l'e-commerce sont possibles. L'API permet grâce à sa structure de lister, filtrer et organiser par pages ces artefacts."
 
   const contributorPresentation01 = "Je suis Rafik Ben Sadi, développeur fullstack et fan d'univers de fantasy. Cette API disponible à tous est à l'origine prévue pour l'un de mes projets personnels, un Wiki sur Star Wars intégrant une boutique en ligne où l'on peut faire ses emplettes avec... des artefacts issus de Star Wars !"
 
-  const contributorPresentation02 = "Ces artefacts sont parfois imaginés ou inspirés de l'univers Canon, Legends, ou bien sont totalement inventés. On en trouve de tous les genres : les sabres laser blanc d'Ahsoka Tano, des ouvrages précieux tel le journal des Whills ou les livres sacrés des anciens Jedi... ou même un gigantesque fragment de l’Étoile de la Mort, pêché directement dans les profondeurs de Kef Bir !"
+  const contributorPresentation02 = "Ces artefacts sont parfois imaginés ou inspirés de l'univers Canon, de Legends, ou bien sont totalement imaginés à partir du lore. On en trouve de tous les genres : les sabres laser blanc d'Ahsoka Tano, des ouvrages précieux tel le journal des Whills ou les livres sacrés des anciens Jedi... ou même un gigantesque fragment de l’Étoile de la Mort, pêché directement dans les profondeurs de Kef Bir !"
 
   const JSONResponse = 
   `{
@@ -26,8 +26,8 @@ export default function Home() {
       {
         "id": "67eebf...",
         "title": "L'holocron de Dark Nihilus",
-        "price": 399.99,
-        "tags": ["Sith", "Ancien"],
+        "description": "Artefact rare contenant...",
+        "price": "250 000",
         ...
       }
     ],
@@ -42,13 +42,24 @@ export default function Home() {
   const JSONObjectExample = 
   `{
     "id": "67eebf...",
-    "title": "L&apos;holocron de Dark Nihilus",
-    "description": "Artefact sith renfermant les connaissances du Seigneur Nihilus.",
-    "price": 399.99,
+    "title": "L’holocron de Dark Nihilus",
+    "description": "Artefact rare contenant la conscience fragmentée de Dark Nihilus, Seigneur Sith légendaire dont la faim dévorait la Force elle-même.",
+    "price": "250 000",
+    "currencyCode": "dataries",
+    "maxQuantity": 1,
+    "imageUrl": "/images/holocron_dark_nihilus.webp",
+    "largeImageUrl": "/images/large/holocron_dark_nihilus_large.webp",
     "isActive": true,
-    "tags": ["Sith", "Ancien", "Légends"],
-    "imageUrl": "/images/holocron.jpg",
-    "largeImageUrl": "/images/large/holocron.jpg"
+    "tags": [
+      "relique",
+      "sith",
+      "rare",
+      "côté obscur de la force"
+    ],
+    "materials": [
+      "cristal de mémoire kyber",
+      "obsidienne"
+    ]
   }`
 
 
