@@ -107,48 +107,50 @@ export default function Home() {
         <div className="star"></div>
       </div>
       <main className={styles.main}>
-        <h1 className={styles.heading}>
-          Star Wars Artefacts API – Documentation
-        </h1>
+        <div className={styles.contentcontainer}>
+          <h1 className={styles.heading}>
+            Star Wars Artefacts API – Documentation
+          </h1>
 
-        <p className={styles.paragraph}>
-          {apiPresentation}
-        </p>
+          <p className={styles.paragraph}>
+            {apiPresentation}
+          </p>
 
-        <h2 className={styles.subheading}>
-          <Image src={cloneOld} alt="Casque de soldat clone" width={32} height={32} style={{ verticalAlign: 'middle' }} /> Base URL
-        </h2>
-        <p className={styles.quote}><code className={styles.code}>https://star-wars-artefacts-api.vercel.app/api/products</code></p>
+          <h2 className={styles.subheading}>
+            <Image src={cloneOld} alt="Casque de soldat clone" width={32} height={32} style={{ verticalAlign: 'middle' }} /> Base URL
+          </h2>
+          <p className={styles.quote}><code className={styles.code}>https://star-wars-artefacts-api.vercel.app/api/products</code></p>
 
-        <h2 className={styles.subheading}><Image src={r2d2} alt="Droid R2D2" width={32} height={32} style={{ verticalAlign: 'middle' }} /> Routes disponibles</h2>
-        <h3 className={styles.firstroute}><Image src={logoRebellion} alt="Logo de l'alliance rebelle" width={24} height={24} style={{ verticalAlign: 'middle' }} /> GET <span className={styles.code}>/api/products</span></h3>
-        <p className={styles.quote}>Renvoie une liste de produits avec pagination, tri, recherche et filtres.</p>
-        <ul className={styles.unorderedlist}>
-          <li><code className={styles.code}>page</code> – numéro de page (par défaut : 1)</li>
-          <li><code className={styles.code}>limit</code> – nombre d’éléments par page ou &quot;all&quot;</li>
-          <li><code className={styles.code}>sort</code> – <code className={styles.code}>title_asc</code>, <code className={styles.code}>price_desc</code>, etc.</li>
-          <li><code className={styles.code}>limitRandom</code> – à utiliser avec <code className={styles.code}>sort=random</code></li>
-          <li><code className={styles.code}>tags</code>, <code className={styles.code}>excludeTags</code> – filtres par mots-clés</li>
-          <li><code className={styles.code}>q</code> – recherche texte</li>
-        </ul>
+          <h2 className={styles.subheading}><Image src={r2d2} alt="Droid R2D2" width={32} height={32} style={{ verticalAlign: 'middle' }} /> Routes disponibles</h2>
+          <h3 className={styles.firstroute}><Image src={logoRebellion} alt="Logo de l'alliance rebelle" width={24} height={24} style={{ verticalAlign: 'middle' }} /> GET <span className={styles.code}>/api/products</span></h3>
+          <p className={styles.quote}>Renvoie une liste de produits avec pagination, tri, recherche et filtres.</p>
+          <ul className={styles.unorderedlist}>
+            <li className={styles.listitem}><code className={styles.code}>page</code> – numéro de page (par défaut : 1)</li>
+            <li className={styles.listitem}><code className={styles.code}>limit</code> – nombre d’éléments par page ou &quot;all&quot;</li>
+            <li className={styles.listitem}><code className={styles.code}>sort</code> – <code className={styles.code}>title_asc</code>, <code className={styles.code}>price_desc</code>, etc.</li>
+            <li className={styles.listitem}><code className={styles.code}>limitRandom</code> – à utiliser avec <code className={styles.code}>sort=random</code></li>
+            <li className={styles.listitem}><code className={styles.code}>tags</code>, <code className={styles.code}>excludeTags</code> – filtres par mots-clés</li>
+            <li className={styles.listitem}><code className={styles.code}>q</code> – recherche texte</li>
+          </ul>
 
-        <h3 className={styles.route}><Image src={logoRebellion} alt="Logo de l'alliance rebelle" width={24} height={24} style={{ verticalAlign: 'middle' }} /> GET <span className={styles.code}>/api/products/[id]</span></h3>
-        <p className={styles.quote}>Renvoie un produit par son <code>id</code> exact.</p>
+          <h3 className={styles.route}><Image src={logoRebellion} alt="Logo de l'alliance rebelle" width={24} height={24} style={{ verticalAlign: 'middle' }} /> GET <span className={styles.code}>/api/products/[id]</span></h3>
+          <p className={styles.quote}>Renvoie un produit par son <code>id</code> exact.</p>
 
-        <h3 className={styles.route}><Image src={logoRebellion} alt="Logo de l'alliance rebelle" width={24} height={24} style={{ verticalAlign: 'middle' }} /> GET <span className={styles.code}>/api/products/by-title?title=...</span></h3>
-        <p className={styles.quote}>Renvoie un produit à partir de son titre exact (recherche insensible aux majuscules et accents).</p>
+          <h3 className={styles.route}><Image src={logoRebellion} alt="Logo de l'alliance rebelle" width={24} height={24} style={{ verticalAlign: 'middle' }} /> GET <span className={styles.code}>/api/products/by-title?title=...</span></h3>
+          <p className={styles.quote}>Renvoie un produit à partir de son titre exact (recherche insensible aux majuscules et accents).</p>
 
-        <h2 className={styles.subheading}><Image src={deathStar} alt="Etoile de la mort" width={32} height={32} style={{ verticalAlign: 'middle' }} /> Exemple de réponse</h2>
-          <CodeBlock code={JSONResponse} />
-        <h2 className={styles.subheading}><Image src={destroyer} alt="Vaisseau destroyer impérial" width={32} height={32} style={{ verticalAlign: 'middle' }} /> Format des données JSON</h2>
-          <CodeBlock code={JSONObjectExample} />     
-        <h2 className={styles.subheading}><Image src={milleniumFalcon} alt="Vaisseau Millenium Falcon" width={32} height={32} style={{ verticalAlign: 'middle' }} /> Contributeur</h2>
-        <p className={styles.paragraph}>
-          {contributorPresentation01}
-        </p>
-        <p className={styles.paragraph}>
-          {contributorPresentation02}
-        </p>
+          <h2 className={styles.subheading}><Image src={deathStar} alt="Etoile de la mort" width={32} height={32} style={{ verticalAlign: 'middle' }} /> Exemple de réponse</h2>
+            <CodeBlock code={JSONResponse} />
+          <h2 className={styles.subheading}><Image src={destroyer} alt="Vaisseau destroyer impérial" width={32} height={32} style={{ verticalAlign: 'middle' }} /> Format des données JSON</h2>
+            <CodeBlock code={JSONObjectExample} />     
+          <h2 className={styles.subheading}><Image src={milleniumFalcon} alt="Vaisseau Millenium Falcon" width={32} height={32} style={{ verticalAlign: 'middle' }} /> Contributeur</h2>
+          <p className={styles.paragraph}>
+            {contributorPresentation01}
+          </p>
+          <p className={styles.paragraph}>
+            {contributorPresentation02}
+          </p>
+        </div>
       </main>
 
       <footer className={styles.footer}>

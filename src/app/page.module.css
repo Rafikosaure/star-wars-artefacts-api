@@ -8,7 +8,7 @@
 
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   align-items: center;
@@ -16,6 +16,7 @@
   min-height: 100svh;
   gap: 64px;
   font-family: var(--font-geist-sans);
+  background-color: rgba(00, 00, 00, .7);
 }
 
 .heading {
@@ -29,11 +30,12 @@
 }
 
 .paragraph, .quote {
-  width: 50%;
-  min-width: 350px;
+  width: 100%;
   text-align: justify;
   margin-left: auto;
   margin-right: auto;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .subheading {
@@ -42,8 +44,9 @@
   margin-top: 2rem;
   font-size: 1.7rem;
   font-weight: bold;
-  width: 50%;
-  min-width: 350px;
+  width: 100%;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .route {
@@ -51,23 +54,29 @@
 }
 
 .route, .unorderedlist, .firstroute, .codeblockcontainer {
-  width: 50%;
-  min-width: 350px;
+  width: 100%;
   text-align: justify;
 }
 
 .code {
   font-family: NotoSansMono;
   color: gray;
+  background-color: black;
   width: fit-content;
 }
 
 .unorderedlist {
   list-style-type: square;
-  margin-left: 2.2rem;
+  margin-left: 14px;
   display: flex;
   flex-direction: column;
   gap: .7rem;
+  width: auto;
+}
+
+.listitem {
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .codeblockcontainer {
@@ -120,4 +129,11 @@
   align-items: center;
   margin-right: auto;
   margin-left: auto;
+}
+
+.contentcontainer {
+  width: 50%;
+  min-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
 }
