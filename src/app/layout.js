@@ -12,8 +12,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Star-Wars Artefacts API",
-  description: "API proposant des artefacts de l'univers Star Wars",
+  title: "Star Wars Artefacts API",
+  description: "Une API REST pour explorer des artefacts de l’univers Star Wars",
 };
 
 export default function RootLayout({ children }) {
