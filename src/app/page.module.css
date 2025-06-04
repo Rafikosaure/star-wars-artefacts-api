@@ -36,24 +36,30 @@
 .subheading {
   font-family: Starjedi;
   text-transform: lowercase;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
   font-size: 1.7rem;
   width: 100%;
   overflow-wrap: break-word;
   hyphens: auto;
 }
 .route {
-  margin-top: 2rem;
+  margin-top: 2.5rem;
 }
 .route, .unorderedlist, .firstroute, .codeblockcontainer {
   width: 100%;
   text-align: justify;
+}
+.route, .firstroute {
+  margin-bottom: 1.2rem;
 }
 .code {
   font-family: NotoSansMono;
   color: gray;
   background-color: black;
   width: fit-content;
+  hyphens: none;
+  word-break: break-all;
 }
 .unorderedlist {
   list-style-type: square;
@@ -69,7 +75,6 @@
 }
 .codeblockcontainer {
   opacity: .8;
-  overflow-x: scroll;
 }
 .codeblock {
   border-radius: 5px;
@@ -79,6 +84,7 @@
   font-size: 1rem;
   line-height: 1.5rem;
   font-family: NotoSansMono;
+  scrollbar-width: thin;
 }
 .footer {
   text-align: center;
@@ -134,7 +140,7 @@
   .paragraph, .quote, .footer {
     line-height: 1.7;
   }
-  .route, .unorderedlist, .firstroute, .codeblockcontainer, .paragraph, .quote, .code, .codeblock, .footer, .footerLink {
+  .route, .unorderedlist, .firstroute, .codeblockcontainer, .paragraph, .quote, .code, .codeblock, .footer, .footerLink, .listitem {
     font-size: 14px;
   }
   .unorderedlist {
@@ -159,7 +165,7 @@
   .paragraph, .quote, .footer {
     line-height: 1.5;
   }
-  .route, .unorderedlist, .firstroute, .codeblockcontainer, .paragraph, .quote, .code, .codeblock, .footer, .footerLink {
+  .route, .unorderedlist, .firstroute, .codeblockcontainer, .paragraph, .quote, .code, .codeblock, .footer, .footerLink, .listitem {
     font-size: 13px;
   }
 }
