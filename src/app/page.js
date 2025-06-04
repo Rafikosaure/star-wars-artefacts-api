@@ -18,7 +18,9 @@ export default function Home() {
 
   const contributorPresentation01 = "Je suis Rafik Ben Sadi, développeur fullstack et fan d'univers de fantasy. Cette API disponible à tous est à l'origine prévue pour l'un de mes projets personnels, un Wiki sur Star Wars intégrant une boutique en ligne où l'on peut faire ses emplettes avec... des artefacts issus de Star Wars !"
 
-  const contributorPresentation02 = "Ces artefacts sont parfois imaginés ou inspirés de l'univers Canon, de Legends, ou bien sont totalement imaginés à partir du lore. On en trouve de tous les genres : les sabres laser blanc d'Ahsoka Tano, des ouvrages précieux tel le journal intime de Padme Amidala ou les livres sacrés des anciens Jedi... ou même un gigantesque fragment de l’Étoile de la Mort, pêché directement dans les profondeurs de Kef Bir !"
+  const contributorPresentation02 = "Ces artefacts sont parfois imaginés ou inspirés de l'univers Canon, de Legends, ou bien sont totalement imaginés à partir du lore. On en trouve de tous les genres : les sabres laser blanc d'Ahsoka Tano, des ouvrages précieux tel le journal intime de Padme Amidala ou les livres sacrés des anciens Jedi... et même un gigantesque fragment de l’Étoile de la Mort, pêché directement dans les profondeurs de Kef Bir !"
+
+  const originApiImages = "Pour information, les images utilisées dans cette API ont été générées par IA ou bien sont issues de sources proposant des visuels libres de droits."
 
   const JSONResponse = 
   `{
@@ -170,6 +172,9 @@ export default function Home() {
           </p>
           <p className={styles.paragraph}><br />
             {contributorPresentation02}
+          </p>
+          <p className={styles.paragraph}><br />
+            {originApiImages}
           </p>
         </div>
       </main>
