@@ -43,7 +43,7 @@ export default function Home() {
   `{
     "id": "67eebf...",
     "title": "L’holocron de Dark Nihilus",
-    "description": "Artefact rare contenant la conscience fragmentée de Dark Nihilus, Seigneur Sith légendaire dont la faim dévorait la Force elle-même.",
+    "description": "Artefact rare contenant...",
     "price": "250 000",
     "currencyCode": "dataries",
     "maxQuantity": 1,
