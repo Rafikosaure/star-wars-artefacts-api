@@ -9,8 +9,9 @@ import milleniumFalcon from '../../public/images/documentation/millenium_falcon.
 import r2d2 from '../../public/images/documentation/r2d2.webp';
 import logoRebellion from '../../public/images/documentation/logo_rebellion.webp'
 import CodeBlock from "./components/CodeBlock";
-// import SEO from "./components/SEO";
 
+
+// Metadata pour le référencement
 export const metadata = {
   title: 'Star Wars Artefacts API',
   description: 'Une API REST pour explorer des artefacts rares issus de l’univers de Star Wars.',
@@ -38,48 +39,10 @@ export const metadata = {
   },
 };
 
-// export const metadata = {
-//   title: 'Star Wars Artefacts API',
-//   description: 'Une API REST pour explorer des artefacts rares issus de l’univers de Star Wars.',
-//   openGraph: {
-//     title: 'Star Wars Artefacts API',
-//     description: 'Explorez des artefacts issus du Canon, des Légendes ou de l’imaginaire autour de Star Wars.',
-//     url: 'https://star-wars-artefacts-api.vercel.app/',
-//     siteName: 'Star Wars Artefacts API',
-//     images: [
-//       {
-//         url: 'https://star-wars-artefacts-api.vercel.app/images/documentation/seo_banner.jpg',
-//         width: 1200,
-//         height: 630,
-//         alt: 'API artefacts Star Wars',
-//       },
-//     ],
-//     locale: 'fr_FR',
-//     type: 'website',
-//   },
-//   twitter: {
-//     card: 'summary_large_image',
-//     title: 'Star Wars Artefacts API',
-//     description: 'Une API REST dédiée aux artefacts de l’univers Star Wars.',
-//     images: ['https://star-wars-artefacts-api.vercel.app/images/documentation/seo_banner.jpg'],
-//   },
-// };
-
 
 export default function Home() {
 
-  // const jsonLd = {
-  //   "@context": "https://schema.org",
-  //   "@type": "WebAPI",
-  //   "name": "Star Wars Artefacts API",
-  //   "description": "Une API REST pour explorer des artefacts de l’univers Star Wars.",
-  //   "url": "https://star-wars-artefacts-api.vercel.app/api/products",
-  //   "provider": {
-  //     "@type": "Person",
-  //     "name": "Rafik Ben Sadi"
-  //   }
-  // };
-
+  // JSON-LD pour le référencement
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebAPI",
@@ -91,7 +54,6 @@ export default function Home() {
       "name": "Rafik Ben Sadi"
     }
   };
-
 
   const apiPresentation = "Cette API présente des artefacts divers liés à Star Wars, l'univers de fiction imaginé par Georges Lucas. Elle a été conçue originellement par un développeur passionné de Star Wars dans le but de fournir à l'un de ses projets e-commerce des produits de vente liés à ce space-opéra iconique. C'est pour cette raison que les artefacts listés ont la structure de produits de vente, avec des clés de données spécifiques. Toutefois, d'autres usages que l'e-commerce sont possibles. L'API permet grâce à sa structure de lister, filtrer et organiser par pages ces artefacts."
 
