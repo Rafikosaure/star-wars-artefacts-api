@@ -6,7 +6,7 @@ export default function SEO() {
   const title = 'Star Wars Artefacts API';
   const description = 'Une API REST pour explorer des artefacts rares issus de l’univers de Star Wars.';
   const url = 'https://star-wars-artefacts-api.vercel.app/';
-  const image = 'images/documentation/seo_banner.jpg';
+  const image = 'https://star-wars-artefacts-api.vercel.app/images/documentation/seo_banner.jpg';
   const siteName = 'Star Wars Artefacts API';
   const locale = 'fr_FR';
 
@@ -32,7 +32,7 @@ export default function SEO() {
       <meta property="og:description" content={description} />
       <meta property="og:url" content={url} />
       <meta property="og:site_name" content={siteName} />
-      <meta property="og:image" content={image} />
+      <meta property="og:image" content='https://star-wars-artefacts-api.vercel.app/images/documentation/seo_banner.jpg' />
       <meta property="og:locale" content={locale} />
       <meta property="og:type" content="website" />
 
@@ -40,7 +40,7 @@ export default function SEO() {
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
+      <meta name="twitter:image" content='https://star-wars-artefacts-api.vercel.app/images/documentation/seo_banner.jpg' />
 
       {/* JSON-LD */}
       <script
