@@ -6,7 +6,7 @@ export default function SEO() {
   const title = 'Star Wars Artefacts API';
   const description = 'Une API REST pour explorer des artefacts rares issus de l’univers de Star Wars.';
   const url = 'https://star-wars-artefacts-api.vercel.app/';
-  const image = 'https://star-wars-artefacts-api.vercel.app/images/documentation/clone_old.webp';
+  const image = 'https://star-wars-artefacts-api.vercel.app/images/documentation/seo_banner.jpg';
   const siteName = 'Star Wars Artefacts API';
   const locale = 'fr_FR';
 
