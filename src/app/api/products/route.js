@@ -3,6 +3,8 @@ import { promises as fs } from 'fs';
 import { parseQueryParams } from '@/utils/parseQueryParams';
 import { filterAndSortProducts } from '@/utils/filterAndSortProducts';
 import { paginateProducts } from '@/utils/paginateProducts';
+import { jsonResponse } from '@/utils/jsonResponse';
+
 
 export async function GET(request) {
   try {
@@ -16,7 +18,7 @@ export async function GET(request) {
     const sortedProducts = filterAndSortProducts(products, sort, tags, excludeTags, queryTerms, limitRandom);
 
     if (limit === 'all') {
-      return Response.json({
+      return jsonResponse({
         data: sortedProducts,
         pagination: {
           total: sortedProducts.length,
@@ -28,14 +30,11 @@ export async function GET(request) {
     }
 
     const result = paginateProducts(sortedProducts, page, limit);
-    return Response.json(result);
+    return jsonResponse(result);
 
   } catch (error) {
     console.error('Erreur dans la route produits :', error);
     const status = error.message === 'Page invalide' ? 400 : 500;
-    return new Response(JSON.stringify({ message: error.message }), {
-      status,
-      headers: { 'Content-Type': 'application/json' },
-    });
+    return jsonResponse({ message: error.message }, status);
   }
 }

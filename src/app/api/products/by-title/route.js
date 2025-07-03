@@ -1,6 +1,8 @@
 import path from 'path';
 import { promises as fs } from 'fs';
 import { normalizeText } from '@/utils/normalizeText.js';
+import { jsonResponse } from '@/utils/jsonResponse';
+
 
 export async function GET(request) {
   try {
@@ -8,10 +10,7 @@ export async function GET(request) {
     const titleParam = searchParams.get('title');
 
     if (!titleParam) {
-      return new Response(JSON.stringify({ message: 'Paramètre "title" requis' }), {
-        status: 400,
-        headers: { 'Content-Type': 'application/json' },
-      });
+      return jsonResponse({ message: 'Paramètre "title" requis' }, 400);
     }
 
     const filePath = path.join(process.cwd(), 'src', 'data', 'products.json');
@@ -23,18 +22,12 @@ export async function GET(request) {
     const match = products.find(p => normalizeText(p.title) === normalizedQuery);
 
     if (!match) {
-      return new Response(JSON.stringify({ message: 'Produit introuvable' }), {
-        status: 404,
-        headers: { 'Content-Type': 'application/json' },
-      });
+      return jsonResponse({ message: 'Produit introuvable' }, 404);
     }
 
-    return Response.json(match);
+    return jsonResponse(match);
   } catch (error) {
     console.error('Erreur recherche produit par nom :', error);
-    return new Response(JSON.stringify({ message: 'Erreur serveur' }), {
-      status: 500,
-      headers: { 'Content-Type': 'application/json' },
-    });
+    return jsonResponse({ message: 'Erreur serveur' }, 500);
   }
 }

@@ -1,6 +1,8 @@
 // src/app/api/products/[id]/route.js
 import path from 'path';
 import { promises as fs } from 'fs';
+import { jsonResponse } from '@/utils/jsonResponse';
+
 
 export async function GET(request, { params }) {
   try {
@@ -11,18 +13,12 @@ export async function GET(request, { params }) {
     const product = products.find((p) => p.id === params.id);
 
     if (!product) {
-      return new Response(JSON.stringify({ message: 'Produit introuvable' }), {
-        status: 404,
-        headers: { 'Content-Type': 'application/json' },
-      });
+      return jsonResponse({ message: 'Produit introuvable' }, 404);
     }
 
-    return Response.json(product);
+    return jsonResponse(product);
   } catch (error) {
     console.error('Erreur lecture produit :', error);
-    return new Response(JSON.stringify({ message: 'Erreur serveur' }), {
-      status: 500,
-      headers: { 'Content-Type': 'application/json' },
-    });
+    return jsonResponse({ message: 'Erreur serveur' }, 500);
   }
 }
