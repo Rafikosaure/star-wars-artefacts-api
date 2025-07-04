@@ -1,8 +1,9 @@
+import config from '../../../../config'
 import path from 'path';
 import { promises as fs } from 'fs';
 import { normalizeText } from '@/utils/normalizeText.js';
 import { jsonResponse } from '@/utils/jsonResponse';
-
+import { withBaseUrl } from '@/utils/withBaseURL';
 
 export async function GET(request) {
   try {
@@ -25,7 +26,9 @@ export async function GET(request) {
       return jsonResponse({ message: 'Produit introuvable' }, 404);
     }
 
-    return jsonResponse(match);
+    const [enrichedMatch] = withBaseUrl([match], config.baseUrl);
+
+    return jsonResponse(enrichedMatch);
   } catch (error) {
     console.error('Erreur recherche produit par nom :', error);
     return jsonResponse({ message: 'Erreur serveur' }, 500);

@@ -1,10 +1,11 @@
+import config from '../../../config'
 import path from 'path';
 import { promises as fs } from 'fs';
 import { parseQueryParams } from '@/utils/parseQueryParams';
 import { filterAndSortProducts } from '@/utils/filterAndSortProducts';
 import { paginateProducts } from '@/utils/paginateProducts';
 import { jsonResponse } from '@/utils/jsonResponse';
-
+import { withBaseUrl } from '@/utils/withBaseURL';
 
 export async function GET(request) {
   try {
@@ -18,8 +19,9 @@ export async function GET(request) {
     const sortedProducts = filterAndSortProducts(products, sort, tags, excludeTags, queryTerms, limitRandom);
 
     if (limit === 'all') {
+      const enrichedProducts = withBaseUrl(sortedProducts, config.baseUrl);
       return jsonResponse({
-        data: sortedProducts,
+        data: enrichedProducts,
         pagination: {
           total: sortedProducts.length,
           page: 1,
@@ -30,7 +32,11 @@ export async function GET(request) {
     }
 
     const result = paginateProducts(sortedProducts, page, limit);
-    return jsonResponse(result);
+    const enrichedPaginated = {
+      ...result,
+      data: withBaseUrl(result.data, config.baseUrl),
+    };
+    return jsonResponse(enrichedPaginated);
 
   } catch (error) {
     console.error('Erreur dans la route produits :', error);
