@@ -25,7 +25,7 @@ import {
 } from "@/app/SEO";
 
 // Metadata pour le référencement
-const metadata = {
+export const metadata = {
     title: 'Star Wars Artefacts API',
     description: 'Une API REST pour explorer des artefacts rares issus de l’univers de Star Wars.',
     openGraph: {
