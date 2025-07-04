@@ -5,7 +5,7 @@ import { parseQueryParams } from '@/utils/parseQueryParams';
 import { filterAndSortProducts } from '@/utils/filterAndSortProducts';
 import { paginateProducts } from '@/utils/paginateProducts';
 import { jsonResponse } from '@/utils/jsonResponse';
-import { withBaseUrl } from '@/utils/withBaseURL';
+import { withBaseUrl } from '@/utils/withBaseUrl';
 
 export async function GET(request) {
   try {

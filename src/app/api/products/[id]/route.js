@@ -3,7 +3,7 @@ import config from '../../../../config'
 import path from 'path';
 import { promises as fs } from 'fs';
 import { jsonResponse } from '@/utils/jsonResponse';
-import { withBaseUrl } from '@/utils/withBaseURL';
+import { withBaseUrl } from '@/utils/withBaseUrl';
 
 export async function GET(request, { params }) {
   try {
