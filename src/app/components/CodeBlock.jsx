@@ -1,5 +1,5 @@
 'use client'
-import styles from '../page.module.css'
+import styles from '../styles/page.module.scss'
 import { useEffect, useRef } from 'react';
 import Prism from 'prismjs';
 import 'prismjs/components/prism-json';
