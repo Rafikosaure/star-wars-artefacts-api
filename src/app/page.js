@@ -35,10 +35,15 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+
       <div className={styles.page}>
+
         <Starfield />
+        
         <main className={styles.main}>
+
           <div className={styles.contentcontainer}>
+            
             <h1 className={styles.heading}>
               Star Wars Artefacts API – Documentation
             </h1>
@@ -50,25 +55,31 @@ export default function Home() {
             <h2 className={styles.subheading}>
               <Image src={cloneOld} alt="Casque de soldat clone" width={32} height={32} style={{ verticalAlign: 'middle' }} /> Base URL
             </h2>
+            
             <p className={styles.quote}><code className={styles.code}>{config.baseUrl}/api/products</code></p>
             
             <ApiRoutesInfo />
 
             <h2 className={styles.subheading}><Image src={deathStar} alt="Etoile de la mort" width={32} height={32} style={{ verticalAlign: 'middle' }} /> Exemple de réponse</h2>
-              {/* <CodeBlock code={JSONResponse} /> */}
-              <CodeBlockWrapper code={JSONResponse} />
+            
+            <CodeBlockWrapper code={JSONResponse} />
+            
             <h2 className={styles.subheading}><Image src={destroyer} alt="Vaisseau destroyer impérial" width={32} height={32} style={{ verticalAlign: 'middle' }} /> Format des données JSON</h2>
-              {/* <CodeBlock code={JSONObjectExample} /> */}
-              <CodeBlockWrapper code={JSONObjectExample} />
+            
+            <CodeBlockWrapper code={JSONObjectExample} />
+            
             <Contributor
               presentation01={contributorPresentation01}
               presentation02={contributorPresentation02}
               imageInfo={originApiImages}
             />
+
           </div>
+
         </main>
 
         <Footer />
+        
       </div>
     </>
   );
