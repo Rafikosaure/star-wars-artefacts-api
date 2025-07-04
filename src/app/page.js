@@ -31,11 +31,11 @@ const metadata = {
     openGraph: {
         title: 'Star Wars Artefacts API',
         description: 'Explorez des artefacts issus du Canon, des Légendes ou de l’imaginaire autour de Star Wars.',
-        url: "https://star-wars-artefacts-api.vercel.app",
+        url: 'https://star-wars-artefacts-api.vercel.app',
         siteName: 'Star Wars Artefacts API',
         images: [
         {
-            url: `https://star-wars-artefacts-api.vercel.app/images/documentation/banner.jpg`,
+            url: 'https://star-wars-artefacts-api.vercel.app/images/documentation/banner.jpg',
             width: 1200,
             height: 630,
             alt: 'API artefacts Star Wars',
@@ -48,7 +48,7 @@ const metadata = {
         card: 'summary_large_image',
         title: 'Star Wars Artefacts API',
         description: 'Une API REST dédiée aux artefacts de l’univers Star Wars.',
-        images: [`https://star-wars-artefacts-api.vercel.app/images/documentation/banner.jpg`],
+        images: ['https://star-wars-artefacts-api.vercel.app/images/documentation/banner.jpg'],
     },
 };
 
