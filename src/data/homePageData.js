@@ -4,7 +4,7 @@ export const contributorPresentation01 = "Je suis Rafik Ben Sadi, développeur f
 
 export const contributorPresentation02 = "Ces artefacts sont parfois imaginés ou inspirés de l'univers Canon, de Legends, ou bien sont totalement imaginés à partir du lore. On en trouve de tous les genres : les sabres laser blanc d'Ahsoka Tano, des ouvrages précieux tel le journal intime de Padme Amidala ou les livres sacrés des anciens Jedi... et même un gigantesque fragment de l’Étoile de la Mort, pêché directement dans les profondeurs de Kef Bir !"
 
-export const originApiImages = "Pour information, les images utilisées dans cette API ont été générées par IA ou bien sont issues de sources proposant des visuels libres de droits."
+export const originApiImages = "Pour information, les images utilisées dans cette API ont toutes été générées par intelligence artificielle dans le respect du droit d'auteur."
 
 export const JSONResponse = 
 `{
